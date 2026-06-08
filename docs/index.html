@@ -64,7 +64,8 @@ a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid currentColo
 .cover-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
 @media (max-width:900px){.cover-grid{grid-template-columns:1fr;gap:24px}}
 .cover h1{font-family:'Open Sans',sans-serif;font-weight:300;font-size:clamp(56px,11vw,168px);line-height:.84;letter-spacing:-.04em;margin:.1em 0}
-.cover h1 em{font-style:italic;color:var(--accent);font-size:clamp(18px,1.6vw,22px);font-style:italic;color:var(--ink-2);max-width:46ch;line-height:1.45}
+.cover h1 em{font-style:italic;color:var(--accent);font-weight:700}
+.cover-lede{font-size:1.0625rem;color:var(--text-body);max-width:54ch;line-height:1.65}
 .cover-lede .dropcap{float:left;font-family:'Open Sans',sans-serif;font-style:italic;font-size:5.2em;line-height:.78;padding:.08em .1em 0 0;color:var(--accent);font-weight:300}
 .cover-side{display:flex;flex-direction:column;gap:18px}
 .fact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule)}
@@ -228,7 +229,74 @@ footer .colophon{font-family:"JetBrains Mono",monospace;font-size:11px;letter-sp
 footer .stamp{font-family:'Open Sans',sans-serif;font-style:italic;font-weight:300;font-size:38px;letter-spacing:-.02em;color:var(--accent)}
 
 button:focus-visible,.qa:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ── NTU SCTP brand overrides (applied last) ── */
+html,body{font-family:'Open Sans',sans-serif;font-weight:400;font-size:16px;line-height:1.7;color:var(--text-body)}
+.masthead-title{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;letter-spacing:-.01em}
+.masthead-title .italic{font-style:normal;color:#fff}  /* drop italic in title */
+.cover{padding:5rem 2.5rem 4rem calc(2.5rem + 6px)}
+.cover h1{font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.15;letter-spacing:-.01em;font-weight:300;margin:.25em 0}
+.cover h1 em{font-size:1em;font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.cover h1 br{display:none}
+.cover-lede{font-size:1.0625rem;line-height:1.7;color:var(--text-body);max-width:60ch}
+.cover-lede .dropcap{font-size:3em;font-style:normal;font-weight:700;color:var(--ntu-crimson);line-height:1;padding:.05em .12em 0 0}
+.fact .num{font-size:1.6rem;font-weight:300;color:var(--ntu-navy);letter-spacing:-.01em}
+section{padding:3.5rem 2.5rem 3.5rem calc(2.5rem + 6px)}
+.section-head{grid-template-columns:64px 1fr;gap:1.5rem;margin-bottom:2rem}
+@media (max-width:760px){.section-head{grid-template-columns:1fr;gap:.4rem}}
+.section-num{font-size:2.4rem;font-style:normal;font-weight:300;color:var(--ntu-crimson);line-height:1}
+.section-title h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:300;line-height:1.2;letter-spacing:-.01em}
+.section-title h2 em{font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.section-title .deck{font-size:1rem;line-height:1.65;color:var(--text-dim);font-style:normal;max-width:70ch}
+.section-title .deck em{font-style:italic;color:var(--ntu-crimson);font-weight:600}
+
+/* Headings used in panels — drop oversized italic */
+.dist-headline,.zhead,.zverdict,.civ-ctrl h3,.clt-col h3,.ab-verdict,.h-card h4,.qa b,.node .ttl{font-style:normal;font-weight:300}
+.dist-headline{font-size:1.4rem;line-height:1.3;letter-spacing:-.005em}
+.dist-headline em{font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.zhead{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+.zbig{font-size:3.2rem;font-weight:300;color:var(--ntu-crimson);letter-spacing:-.02em}
+.zverdict{font-size:1.15rem;font-weight:600;line-height:1.3;color:var(--text)}
+.zsmall{font-size:.9rem;color:var(--text-dim);line-height:1.55}
+.civ-ctrl h3,.clt-col h3{font-size:1.15rem;font-weight:700;letter-spacing:.02em;color:var(--text)}
+.clt-col h3 em,.dist-headline em{font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.ab-verdict{font-size:1.3rem;font-weight:300;line-height:1.3}
+.ab-verdict em{font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.h-card{border:1px solid var(--border);border-top:4px solid var(--ntu-crimson);background:var(--bg-off);padding:1.25rem;border-radius:4px}
+.h-card .n{font-size:2rem;font-style:normal;font-weight:300;color:var(--ntu-crimson);line-height:1}
+.h-card h4{font-size:1.05rem;font-weight:700;letter-spacing:-.005em;color:var(--text)}
+.h-card p{font-size:.95rem;color:var(--text-body);line-height:1.6}
+.qa{border-radius:4px;border-left:4px solid var(--border)}
+.qa:hover{background:var(--bg-off);border-left-color:var(--ntu-blue)}
+.qa.on{background:var(--ntu-navy);color:#fff;border-left-color:var(--ntu-crimson)}
+.qa b{font-size:1rem;font-weight:700;line-height:1.35;letter-spacing:0}
+.qa.on .a{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.15)}
+
+/* Pull quote — navy with crimson em (per brand) */
+.pull{background:var(--ntu-navy);border-top:5px solid var(--ntu-crimson);border-bottom:5px solid var(--ntu-crimson)}
+.pull::before{background:radial-gradient(800px 400px at 80% 30%,rgba(200,16,46,.18),transparent 60%)}
+.pull blockquote{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:300;line-height:1.2;font-style:normal;color:#fff}
+.pull blockquote em{font-style:italic;color:var(--ntu-crimson);font-weight:700}
+.pull cite{color:rgba(255,255,255,.65)}
+
+/* Course map nodes */
+.node .ttl{font-size:.95rem;font-style:normal;font-weight:700;line-height:1.25}
+.node.is-now{background:var(--ntu-crimson)}
+.node .lens{background:var(--ntu-blue)}
+
+/* Footer */
+footer .stamp{font-size:1.4rem;font-style:normal;font-weight:300;letter-spacing:-.01em;color:var(--ntu-crimson)}
+
+/* Links & selection */
+a{color:var(--ntu-blue);border-bottom:1px solid currentColor}
+a:hover{color:var(--ntu-blue-light)}
+::selection{background:var(--ntu-crimson);color:#fff}
+
+/* Buttons — distribution picker */
+.dist-pick button{font-style:normal;font-weight:600;font-size:.95rem;letter-spacing:0}
+.dist-pick button.on{background:var(--ntu-navy);color:#fff}
 </style>
+
 </head>
 <body>
 
